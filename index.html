@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CatCheat_TT_files</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        }
+
+        body {
+            min-height: 100vh;
+            background: #0b0d17;
+            background-image: 
+                radial-gradient(ellipse at 20% 50%, #1a1a3e 0%, transparent 60%),
+                radial-gradient(ellipse at 80% 50%, #1a0e2a 0%, transparent 60%),
+                radial-gradient(ellipse at 50% 0%, #1f1a3a 0%, transparent 40%);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 24px 20px;
+            position: relative;
+            overflow-x: hidden;
+        }
+
+        /* Декоративные линии */
+        body::before {
+            content: '';
+            position: fixed;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: repeating-linear-gradient(
+                45deg,
+                transparent,
+                transparent 40px,
+                rgba(255, 200, 100, 0.02) 40px,
+                rgba(255, 200, 100, 0.02) 41px
+            );
+            pointer-events: none;
+            animation: bgMove 60s linear infinite;
+        }
+
+        @keyframes bgMove {
+            0% { transform: translate(0, 0); }
+            100% { transform: translate(40px, 40px); }
+        }
+
+        .container {
+            max-width: 640px;
+            width: 100%;
+            position: relative;
+            z-index: 2;
+        }
+
+        /* Верхняя часть с логотипом */
+        .header {
+            text-align: center;
+            margin-bottom: 32px;
+        }
+
+        .logo-icon {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 72px;
+            height: 72px;
+            background: linear-gradient(135deg, #f7c948, #f5a623);
+            border-radius: 20px;
+            font-size: 36px;
+            margin-bottom: 16px;
+            box-shadow: 0 12px 40px rgba(245, 166, 35, 0.25);
+        }
+
+        h1 {
+            font-size: 2.6rem;
+            font-weight: 800;
+            letter-spacing: -0.5px;
+            background: linear-gradient(135deg, #ffffff 30%, #c8b8e8 70%, #f5c890);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            line-height: 1.1;
+        }
+
+        .sub-badge {
+            display: inline-block;
+            margin-top: 8px;
+            padding: 6px 20px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 100px;
+            color: #9aa8cc;
+            font-size: 0.85rem;
+            font-weight: 500;
+            letter-spacing: 0.3px;
+            backdrop-filter: blur(8px);
+        }
+
+        /* Описание — выделенный блок */
+        .description-block {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 215, 150, 0.1);
+            border-radius: 24px;
+            padding: 20px 28px;
+            margin-bottom: 36px;
+            text-align: center;
+            backdrop-filter: blur(8px);
+            transition: border-color 0.3s;
+        }
+
+        .description-block:hover {
+            border-color: rgba(255, 215, 150, 0.25);
+        }
+
+        .description-block p {
+            font-size: 1.1rem;
+            color: #d0d9f0;
+            font-weight: 400;
+            line-height: 1.6;
+        }
+
+        .description-block .highlight {
+            color: #f5c890;
+            font-weight: 600;
+        }
+
+        .description-block .emoji-big {
+            font-size: 1.4rem;
+            display: inline-block;
+            margin-right: 6px;
+        }
+
+        /* Основной блок с чит-файлом */
+        .main-card {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.06);
+            border-radius: 32px;
+            padding: 36px 32px 40px;
+            backdrop-filter: blur(12px);
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+            transition: transform 0.25s ease, box-shadow 0.3s ease;
+        }
+
+        .main-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 28px 80px rgba(0, 0, 0, 0.7);
+        }
+
+        .cheat-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-bottom: 12px;
+        }
+
+        .cheat-name {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #ffffff;
+            letter-spacing: -0.3px;
+        }
+
+        .cheat-name span {
+            background: linear-gradient(135deg, #f5a623, #f7c948);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+
+        .version-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(245, 166, 35, 0.12);
+            border: 1px solid rgba(245, 166, 35, 0.2);
+            padding: 6px 18px;
+            border-radius: 100px;
+            color: #f5c890;
+            font-weight: 600;
+            font-size: 0.95rem;
+        }
+
+        .version-badge::before {
+            content: '⚡';
+            font-size: 0.9rem;
+        }
+
+        .divider {
+            height: 1px;
+            background: linear-gradient(to right, transparent, rgba(255, 255, 255, 0.08), transparent);
+            margin: 18px 0 24px;
+        }
+
+        .file-info {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            background: rgba(0, 0, 0, 0.25);
+            padding: 14px 20px;
+            border-radius: 16px;
+            margin-bottom: 28px;
+            border: 1px solid rgba(255, 255, 255, 0.04);
+        }
+
+        .file-info .icon {
+            font-size: 28px;
+        }
+
+        .file-info .details {
+            flex: 1;
+        }
+
+        .file-info .filename {
+            color: #e8ecf7;
+            font-weight: 500;
+            font-size: 1rem;
+        }
+
+        .file-info .filesize {
+            color: #7a8aaa;
+            font-size: 0.8rem;
+            margin-top: 2px;
+        }
+
+        .file-info .badge-apk {
+            background: rgba(76, 175, 80, 0.15);
+            color: #81c784;
+            padding: 4px 14px;
+            border-radius: 100px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            letter-spacing: 0.3px;
+            border: 1px solid rgba(76, 175, 80, 0.15);
+        }
+
+        /* Кнопка скачивания */
+        .download-wrapper {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .download-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            width: 100%;
+            padding: 18px 32px;
+            background: linear-gradient(135deg, #f5a623, #f7c948);
+            border: none;
+            border-radius: 60px;
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: #0b0d17;
+            cursor: pointer;
+            transition: all 0.25s ease;
+            text-decoration: none;
+            box-shadow: 0 8px 30px rgba(245, 166, 35, 0.3);
+            letter-spacing: 0.3px;
+        }
+
+        .download-btn:hover {
+            transform: translateY(-3px) scale(1.01);
+            box-shadow: 0 14px 40px rgba(245, 166, 35, 0.5);
+            background: linear-gradient(135deg, #ffb82e, #f7c948);
+        }
+
+        .download-btn:active {
+            transform: scale(0.97);
+        }
+
+        .download-btn .arrow {
+            font-size: 1.4rem;
+            transition: transform 0.2s;
+        }
+
+        .download-btn:hover .arrow {
+            transform: translateY(2px);
+        }
+
+        .secure-hint {
+            color: #5d6f92;
+            font-size: 0.8rem;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .secure-hint::before {
+            content: '🔒';
+            font-size: 0.9rem;
+        }
+
+        /* Нижний колонтитул */
+        .footer {
+            margin-top: 28px;
+            text-align: center;
+            color: #3d4a6a;
+            font-size: 0.8rem;
+            letter-spacing: 0.2px;
+            border-top: 1px solid rgba(255, 255, 255, 0.04);
+            padding-top: 20px;
+        }
+
+        .footer span {
+            color: #6a7ca0;
+        }
+
+        /* Адаптив */
+        @media (max-width: 520px) {
+            h1 {
+                font-size: 2rem;
+            }
+            .cheat-header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            .cheat-name {
+                font-size: 1.5rem;
+            }
+            .main-card {
+                padding: 24px 18px 30px;
+            }
+            .description-block p {
+                font-size: 0.95rem;
+            }
+            .download-btn {
+                font-size: 1.05rem;
+                padding: 15px 24px;
+            }
+            .file-info {
+                flex-wrap: wrap;
+            }
+            .logo-icon {
+                width: 60px;
+                height: 60px;
+                font-size: 28px;
+            }
+        }
+
+        @media (max-width: 400px) {
+            .container {
+                padding: 0 4px;
+            }
+            .main-card {
+                padding: 20px 14px 24px;
+                border-radius: 24px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Шапка -->
+        <div class="header">
+            <div class="logo-icon">🐱</div>
+            <h1>CatCheat_TT_files</h1>
+            <div class="sub-badge">✦ Официальный релиз</div>
+        </div>
+
+        <!-- Описание -->
+        <div class="description-block">
+            <p>
+                <span class="emoji-big">📱</span>
+                Если вы пришли с <span class="highlight">ТикТока</span>, 
+                вы можете скачать файлы тут!
+            </p>
+        </div>
+
+        <!-- Основной блок -->
+        <div class="main-card">
+            <!-- Заголовок чита -->
+            <div class="cheat-header">
+                <div class="cheat-name">
+                    BlockPost <span>cheat</span>
+                </div>
+                <div class="version-badge">
+                    1.42F3
+                </div>
+            </div>
+
+            <div class="divider"></div>
+
+            <!-- Информация о файле -->
+            <div class="file-info">
+                <div class="icon">📦</div>
+                <div class="details">
+                    <div class="filename">BlockPost_CatCheat.apk</div>
+                    <div class="filesize">~ ? MB • Обновлено: 31.07.2026</div>
+                </div>
+                <div class="badge-apk">APK</div>
+            </div>
+
+            <!-- Кнопка скачивания -->
+            <div class="download-wrapper">
+                <a href="BlockPost_CatCheat.apk" class="download-btn" download>
+                    <span class="arrow">⬇</span> Скачать файл
+                </a>
+                <div class="secure-hint">Безопасная загрузка • Проверено</div>
+            </div>
+        </div>
+
+        <!-- Футер -->
+        <div class="footer">
+            <span>CatCheat_TT_files</span>
+        </div>
+    </div>
+</body>
+</html>
