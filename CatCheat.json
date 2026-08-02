@@ -1,0 +1,404 @@
+{
+    "accent_color": {
+        "a": 255,
+        "b": 255,
+        "g": 92,
+        "r": 24
+    },
+    "changer": {
+        "agent": {
+            "blockops_type": 1,
+            "custom_model": true,
+            "custom_texture": true,
+            "enabled": true,
+            "postpunks_type": 1
+        },
+        "avatar": {
+            "enabled": true,
+            "value": 2
+        }
+    },
+    "knife_data": {
+        "knife_id": 3
+    },
+    "misc": {
+        "general": {
+            "aspect_ratio": {
+                "enabled": true,
+                "value": 0.8999999761581421
+            },
+            "camera_fov": {
+                "enabled": true,
+                "value": 82.0
+            },
+            "chat_settings": {
+                "kill_say": true
+            },
+            "crosshair_thickness": 3.5,
+            "custom_scope": {
+                "enabled": true,
+                "gap": 15.0,
+                "half_color": {
+                    "a": 130,
+                    "b": 255,
+                    "g": 255,
+                    "r": 255
+                },
+                "length": 205.0,
+                "main_color": {
+                    "a": 80,
+                    "b": 255,
+                    "g": 255,
+                    "r": 255
+                },
+                "thickness": 3.0
+            },
+            "removals_type": {
+                "0": false,
+                "1": false,
+                "2": false,
+                "3": false,
+                "4": false
+            },
+            "third_person": {
+                "distance": 5.800000190734863,
+                "enabled": true
+            }
+        },
+        "movement": {
+            "auto_strafe": true
+        }
+    },
+    "rage": {
+        "aimbot": {
+            "auto_attack": true,
+            "auto_switch": true,
+            "backtrack": false,
+            "backtrack_ms": 150.0,
+            "enabled": true,
+            "hitbox_type": {
+                "0": true,
+                "1": false,
+                "2": false,
+                "3": false
+            },
+            "maximum_fov": 1000.0,
+            "multi_point": false,
+            "multi_point_scale": 0.5,
+            "no_spread": false,
+            "prediction_length": 2.0,
+            "rapid_fire": false
+        },
+        "antiaim": {
+            "enabled": true,
+            "fake_duck": false,
+            "fake_lags": {
+                "enabled": false,
+                "rate": 5,
+                "show_clone": false
+            },
+            "jitter_range": 5.0,
+            "manuals": {
+                "active_color": {
+                    "a": 63,
+                    "b": 0,
+                    "g": 255,
+                    "r": 0
+                },
+                "enabled": true,
+                "inactive_color": {
+                    "a": 63,
+                    "b": 0,
+                    "g": 0,
+                    "r": 255
+                },
+                "yaw": 0
+            },
+            "mode_type": 1,
+            "off_lerp": false,
+            "pitch_type": 4,
+            "spin_speed": 23.399999618530273,
+            "state": {
+                "air": {
+                    "jitter_range": 5.0,
+                    "mode_type": 0,
+                    "pitch_type": 0,
+                    "spin_speed": 15.0,
+                    "yaw_type": 0
+                },
+                "duck": {
+                    "jitter_range": 5.0,
+                    "mode_type": 0,
+                    "pitch_type": 0,
+                    "spin_speed": 15.0,
+                    "yaw_type": 0
+                },
+                "enabled": false,
+                "stand": {
+                    "jitter_range": 5.0,
+                    "mode_type": 0,
+                    "pitch_type": 0,
+                    "spin_speed": 15.0,
+                    "yaw_type": 0
+                }
+            },
+            "yaw_type": 1
+        }
+    },
+    "skin_changer": {
+        "knifes": [
+            {
+                "skin_id": 95,
+                "weapon_id": 3
+            }
+        ],
+        "weapons": []
+    },
+    "strip_color": {
+        "a": 255,
+        "b": 255,
+        "g": 255,
+        "r": 255
+    },
+    "visuals": {
+        "chams": {
+            "backtrack": {
+                "color": {
+                    "a": 128,
+                    "b": 0,
+                    "g": 0,
+                    "r": 255
+                },
+                "enabled": false
+            },
+            "enemy": {
+                "color": {
+                    "a": 255,
+                    "b": 255,
+                    "g": 255,
+                    "r": 255
+                },
+                "enabled": true,
+                "through_the_wall": true
+            },
+            "local": {
+                "color": {
+                    "a": 255,
+                    "b": 255,
+                    "g": 255,
+                    "r": 255
+                },
+                "enabled": true
+            },
+            "local_clone": {
+                "color": {
+                    "a": 255,
+                    "b": 255,
+                    "g": 255,
+                    "r": 255
+                },
+                "enabled": false
+            },
+            "local_weapon": {
+                "color": {
+                    "a": 255,
+                    "b": 255,
+                    "g": 255,
+                    "r": 255
+                },
+                "enabled": true
+            }
+        },
+        "esp": {
+            "dropped": {
+                "color": {
+                    "a": 255,
+                    "b": 255,
+                    "g": 255,
+                    "r": 255
+                },
+                "enabled": false
+            },
+            "indicators": {
+                "enabled": false,
+                "fake_lag": {
+                    "active_color": {
+                        "a": 255,
+                        "b": 0,
+                        "g": 0,
+                        "r": 255
+                    },
+                    "enabled": false,
+                    "inactive_color": {
+                        "a": 255,
+                        "b": 255,
+                        "g": 255,
+                        "r": 255
+                    }
+                },
+                "state": {
+                    "color": {
+                        "a": 255,
+                        "b": 255,
+                        "g": 255,
+                        "r": 255
+                    },
+                    "enabled": false
+                }
+            },
+            "players": {
+                "armor": {
+                    "color": {
+                        "a": 255,
+                        "b": 255,
+                        "g": 119,
+                        "r": 99
+                    },
+                    "enabled": true
+                },
+                "enabled": true,
+                "health": {
+                    "color": {
+                        "a": 255,
+                        "b": 99,
+                        "g": 255,
+                        "r": 147
+                    },
+                    "enabled": true
+                },
+                "local_prediction_tracer": {
+                    "color": {
+                        "a": 255,
+                        "b": 255,
+                        "g": 255,
+                        "r": 255
+                    },
+                    "enabled": true
+                },
+                "local_skeleton": {
+                    "color": {
+                        "a": 255,
+                        "b": 255,
+                        "g": 255,
+                        "r": 255
+                    },
+                    "enabled": false
+                },
+                "name": {
+                    "color": {
+                        "a": 255,
+                        "b": 255,
+                        "g": 255,
+                        "r": 255
+                    },
+                    "enabled": true
+                },
+                "rect": {
+                    "color": {
+                        "a": 255,
+                        "b": 255,
+                        "g": 255,
+                        "r": 255
+                    },
+                    "enabled": true
+                },
+                "skeleton": {
+                    "color": {
+                        "a": 255,
+                        "b": 255,
+                        "g": 255,
+                        "r": 255
+                    },
+                    "enabled": false
+                },
+                "weapon": {
+                    "color": {
+                        "a": 255,
+                        "b": 255,
+                        "g": 255,
+                        "r": 255
+                    },
+                    "enabled": true
+                }
+            }
+        },
+        "world": {
+            "environment": {
+                "fog": {
+                    "color": {
+                        "a": 255,
+                        "b": 100,
+                        "g": 100,
+                        "r": 100
+                    },
+                    "enabled": true,
+                    "end": 100.0,
+                    "start": 0.0
+                },
+                "skybox": {
+                    "color": {
+                        "a": 255,
+                        "b": 100,
+                        "g": 100,
+                        "r": 100
+                    },
+                    "enabled": true
+                },
+                "world": {
+                    "color": {
+                        "a": 255,
+                        "b": 100,
+                        "g": 100,
+                        "r": 100
+                    },
+                    "enabled": true,
+                    "flat": true
+                }
+            },
+            "render": {
+                "bullet_tracer": {
+                    "color": {
+                        "a": 255,
+                        "b": 0,
+                        "g": 0,
+                        "r": 255
+                    },
+                    "enabled": true,
+                    "glow": 0.0,
+                    "thickness": 1.5
+                },
+                "damage_marker": {
+                    "color": {
+                        "a": 255,
+                        "b": 255,
+                        "g": 255,
+                        "r": 255
+                    },
+                    "enabled": true
+                },
+                "hit_circle": {
+                    "color": {
+                        "a": 128,
+                        "b": 255,
+                        "g": 255,
+                        "r": 255
+                    },
+                    "enabled": false,
+                    "glow": 15.0,
+                    "thickness": 1.0
+                },
+                "hit_marker": {
+                    "color": {
+                        "a": 255,
+                        "b": 255,
+                        "g": 255,
+                        "r": 255
+                    },
+                    "enabled": true,
+                    "indent": 3.0,
+                    "thickness": 2.0
+                }
+            }
+        }
+    }
+}
